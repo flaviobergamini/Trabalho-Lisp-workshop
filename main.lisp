@@ -1,0 +1,58 @@
+(defun soma ()
+    (format t " ~% Insira o primeiro numero: ")
+    (setq a (read))
+    (format t " ~% Insira o segundo numero: ")
+    (setq b (read))
+    (format t " ~% Resultado = ~2d"( + a b))
+)
+
+(defun sub ()
+    (format t " ~% Insira o primeiro numero: ")
+    (setq a (read))
+    (format t " ~% Insira o segundo numero: ")
+    (setq b (read))
+    (format t " ~% Resultado = ~2d"( - a b))
+)
+
+(defun mult ()
+    (format t " ~% Insira o primeiro numero: ")
+    (setq a (read))
+    (format t " ~% Insira o segundo numero: ")
+    (setq b (read))
+    (format t " ~% Resultado = ~2d"( * a b))
+)
+
+(defun div ()
+    (format t " ~% Insira o primeiro numero: ")
+    (setq a (read))
+    (format t " ~% Insira o segundo numero: ")
+    (setq b (read))
+    (if (/= b 0)
+        (format t " ~% Resultado = ~2d"( / a b)))
+    (if (= b 0)
+    (write "Nao foi possivel fazer a divisao"))
+)
+
+(write-line "+------------------Calculadora de C005-------------------+")
+(write-line "|                                                        |")
+(write-line "! (1) - Adicao                                           |")
+(write-line "| (2) - Subtracao                                        |")
+(write-line "| (3) - Multiplicacao                                    |")
+(write-line "| (4) - Divisao                                          |")
+(write-line "+--------------------------------------------------------+")
+(write-line "Escolha uma opcao:")
+(setq receive (read))
+
+(if (= receive 1)
+    (soma))
+    
+(if (= receive 2)
+    (sub))
+    
+(if (= receive 3)
+    (mult))
+
+(if (= receive 4)
+    (div))
+
+
